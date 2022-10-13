@@ -1,14 +1,18 @@
-import { Component } from "react";
-import { FeedbackOptions, Statistics, Section, Notification } from "../";
+import { Component } from 'react';
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
+import { Statistics } from '../Statistics/Statistics';
+import { Section } from '../Section/Section';
+import { Notification } from '../Notification/Notification';
+import { Wrapper } from './App.styled';
 
-export class Feedback extends Component {
+export class App extends Component {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
 
-  updateState = (e) => {
+  updateState = e => {
     const targetElementContent = e.target.textContent;
 
     this.setState(() => ({
@@ -31,12 +35,12 @@ export class Feedback extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <>
+      <Wrapper className="App">
         <Section title="Please leave a feedback">
           <FeedbackOptions
             options={state}
             onLeaveFeedback={updateState}
-            type={"button"}
+            type={'button'}
           ></FeedbackOptions>
         </Section>
         <Section title="Statistics">
@@ -52,7 +56,7 @@ export class Feedback extends Component {
             <Notification message="There is no feedback yet"></Notification>
           )}
         </Section>
-      </>
+      </Wrapper>
     );
   }
 }

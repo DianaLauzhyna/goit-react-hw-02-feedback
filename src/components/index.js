@@ -1,4 +1,4 @@
-export { Feedback } from "./Feedback/Feedback";
+export { App} from "./App/App";
 export { Statistics } from "./Statistics/Statistics";
 export { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
 export { Section } from "./Section/Section";
