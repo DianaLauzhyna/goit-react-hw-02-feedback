@@ -40,7 +40,6 @@ export class App extends Component {
           <FeedbackOptions
             options={state}
             onLeaveFeedback={updateState}
-            type={'button'}
           ></FeedbackOptions>
         </Section>
         <Section title="Statistics">
